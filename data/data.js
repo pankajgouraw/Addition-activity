@@ -1,8 +1,8 @@
 
 const headerText = 'Four digit addition';
 const headerInstructionColor = 'white';
-const min = 1;
-const max = 1000;
+const min = 1000;
+const max = 9000;
 
 
 // let data = [

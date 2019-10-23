@@ -1,6 +1,7 @@
 $(function() {
 
-    let result;
+    let result='';
+    let userAns = 0;
     $("#headerText").text(headerText);
     // $("#instruction").text(InstructionText);
     $("#instruction").css({color:headerInstructionColor});
@@ -52,10 +53,15 @@ $(function() {
   generateContent();
   dragDrop();
 
-  $('#reload').click(function(){
+  $('#next').click(function(){
+     $(this).hide();
+     $('#check').fadeIn();
      generateContent();
      dragDrop();
   });
+  $('#reload').click(function(){
+    window.location.href = 'main.html';
+  })
 
   $('#check').click(function(){
      let dropTag = $('.ansContainer p');
@@ -64,11 +70,28 @@ $(function() {
         let userData = $(value).children().text();
         userInput += userData;
      });
-     console.log(parseInt(userInput));
+     // console.log(parseInt(userInput));
+     let output = $('.output');
+     // console.log(output)
+     if(userInput == ''){
+        return false;
+     }
+     $(this).hide();
+     $('#next').fadeIn();
+
      if(parseInt(userInput) === result){
         console.log(true);
+        $(output[userAns]).css("background-image", "url(" + 'img/happy.png' + ")");
+        userAns++;
      }else{
         console.log(false);
+        $(output[userAns]).css("background-image", "url(" + 'img/sad.png' + ")");
+        userAns++;
+     }
+
+     if(userAns > 9){
+        $('#next').hide();
+        $('#reload').fadeIn();
      }
   })
 });   // end document function 
