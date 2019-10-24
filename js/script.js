@@ -3,9 +3,10 @@ $(function() {
     let result='';
     let userAns = 0;
     $("#headerText").text(headerText);
-    // $("#instruction").text(InstructionText);
     $("#instruction").css({color:headerInstructionColor});
-
+    $('body').css({'background-image':bg});
+    generateContent();
+    dragDrop();
 
     // function for drag and drop
   function dragDrop(){
@@ -38,10 +39,7 @@ $(function() {
         $('#firstNo').html(randA);
         $('#secNo').html(randB);
         result = randA + randB;
-        console.log('Result :' + result);
-        console.log(typeof result);
 
-        console.log('Result num length  :' + result.toString().length);
         // generate drop box 
         let dropTag='';
         for(let i = 0; i<result.toString().length; i++){
@@ -50,8 +48,7 @@ $(function() {
         }
         $('.ansContainer').html(dropTag);
   }
-  generateContent();
-  dragDrop();
+
 
   $('#next').click(function(){
      $(this).hide();
@@ -59,6 +56,7 @@ $(function() {
      generateContent();
      dragDrop();
   });
+
   $('#reload').click(function(){
     window.location.href = 'main.html';
   })
@@ -80,18 +78,18 @@ $(function() {
      $('#next').fadeIn();
 
      if(parseInt(userInput) === result){
-        console.log(true);
+       // console.log(true);
         $(output[userAns]).css("background-image", "url(" + 'img/happy.png' + ")");
         userAns++;
      }else{
-        console.log(false);
+       // console.log(false);
         $(output[userAns]).css("background-image", "url(" + 'img/sad.png' + ")");
         userAns++;
      }
-
      if(userAns > 9){
         $('#next').hide();
         $('#reload').fadeIn();
      }
   })
+  
 });   // end document function 

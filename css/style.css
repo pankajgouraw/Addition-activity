@@ -2,7 +2,7 @@
 body {
 	background: #a9a9a9;
     font-family: sans-serif;
-	background-image: radial-gradient(#4CAF50, #009688);
+	/*background-image: radial-gradient(#4CAF50, #009688);*/
     background-size: cover;
 	background-position: unset;
 	background-repeat: no-repeat;
@@ -51,7 +51,7 @@ margin-top:0px;
 .Example .emoji{flex-direction: row;align-items: center;}
 .Example .expAns{border-top: 1px solid #fff;margin-top: 5px;padding-top: 5px;}
 .Example p{font-size: 20px;color: #fff;}
-.border{border:1px solid #FFF; padding: 10px;}
+.border{border:1px solid #FFF; padding: 10px; box-shadow: 0px 0px 5px #000;}
 .operations{display: flex;justify-content: space-around;}
 .questionContainer .question{display: flex;flex-direction: column;align-items: flex-end;margin-bottom: 30px;}
 
@@ -92,6 +92,7 @@ background-image: url('../img/resultBg.png');
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
+box-shadow: 0px 0px 5px #000;
 }
 
 #next, #reload{ display: none; }
