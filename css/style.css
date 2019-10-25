@@ -116,8 +116,8 @@ box-shadow: 0px 0px 5px #000;
 .question{font-size: 13px;}
 .questionNo {margin-bottom: 10px;font-size: 18px;font-weight: normal;}
 #header{padding-bottom:0px; margin-bottom:0px;}
-/*.Example p{font-size: 15px;}
-.options p{font-size: 25px;width: 30px;height: 30px;}
+.Example p{font-size: 15px;}
+/*.options p{font-size: 25px;width: 30px;height: 30px;}
 .questionContainer .question p{font-size: 25px;}
 .ansContainer p{font-size: 25px;width: 30px;height: 30px;}
 #secNo, #firstNo{ letter-spacing: 15px;}
