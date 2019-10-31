@@ -20,6 +20,57 @@ color: #fff;
 margin-top:0px;
 }
 
+.oops{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    background:
+    #000000d6;
+    color:
+    #fff;
+    height: 0px;
+    overflow: hidden;
+    width: 0px;
+    text-align: center;
+    text-transform: capitalize;
+    padding-top:100px;
+}
+
+.oops img{
+width: 200px;
+margin-bottom: 30px;
+}
+
+.wellDone{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    background:
+    #000000d6;
+    color:
+    #fff;
+    height: 0px;
+    overflow: hidden;
+    width: 0px;
+    text-align: center;
+    text-transform: capitalize;
+    padding-top:100px;
+}
+
+.wellDone img{
+width: 200px;
+margin-bottom: 30px;
+}
+
+.oopsHW{
+    width: 100%;
+    height:100%;
+}
+
+#showAns{
+    display: none;
+}
+
 #header .logo {margin: 0px auto;display: flex;align-items: center;}
 #header {padding: 15px;}
 #innerWrapper{  max-width: 960px;  margin: 15px;}
@@ -54,9 +105,10 @@ margin-top:0px;
 .border{border:1px solid #FFF; padding: 10px; box-shadow: 0px 0px 5px #000;}
 .operations{display: flex;justify-content: space-around;}
 .questionContainer .question{display: flex;flex-direction: column;align-items: flex-end;margin-bottom: 30px;}
-
 #secNo, #firstNo{letter-spacing: 20px;}
-.questionContainer .question p{font-size: 50px;overflow: hidden;}
+#firstNo > span {position: relative;}
+#firstNo > span > span{display: inline-block;left: 25px;position: absolute;top: -10px;font-size: 15px;font-weight: bold;}
+.questionContainer .question p{font-size: 50px;}
 .questionContainer .options{}
 .options{ margin-top: 10px;padding-top: 10px;padding-bottom: 10px;display: flex;}
 .options p span{display: block;width: inherit;height: inherit;}
@@ -80,7 +132,7 @@ width: 50px;
 height: 50px;
 display: flex;
 justify-content: center;
-    align-items: center;
+align-items: center;
 }
 
 .resultContainer{width:115px;}
@@ -106,6 +158,7 @@ box-shadow: 0px 0px 5px #000;
 #secNo, #firstNo{ letter-spacing: 15px;}
 .resultContainer{width:80px;}
 .resultContainer .output{height: 40px;}
+#firstNo > span > span{display: inline-block;left: 12px;position: absolute;top: -10px;font-size: 15px;font-weight: bold;}
 }
 
 
